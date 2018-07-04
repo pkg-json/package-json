@@ -8,6 +8,10 @@ Historically, `package.json` has been documented by various tools such as [npm](
 
 The goal of this document is not to list every possible field, but to spec existing commonly implemented fields across multiple tools, and provide a home for consensus building around future extensions to the `package.json` format. It is not expected that every tool implement every feature described in this document as different tools have different needs, however, it is expected that tools implement individual features according to this spec in order to be compliant.
 
+For existing fields, the goal is mostly to document how each field that is already implemented by existing tools should be used by package authors. This should be done in a detailed enough way that a tool author could also implement support for an existing package.json field in a new tool without reading the source code of another tool. The goal is not to change how existing tools work, just to document the informal defacto standard already agreed on in other forums and commonly used throughout the ecosystem.
+
+For new fields, the goal of this spec is not to prevent tools from experimenting and creating their own tool-specific fields as many have today. However, if those tools are interested in coming to a consensus with other tool makers around a feature that could benefit the entire ecosystem, the RFC process on this repo would be a good place to do that and document the result.
+
 ## RFC Process
 
 Substantial changes to the spec will follow an RFC (request for comments) process through pull requests. The process is as follows:
