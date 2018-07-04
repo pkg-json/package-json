@@ -5,6 +5,7 @@
 * [Essentials](#essentials)
   - [`name`](#name)
   - [`version`](#version)
+  - [`main`](#main)
 
 ## Essentials
 
@@ -43,3 +44,17 @@
 ```
 
 The version number must be valid [semver](https://semver.org). See the [npm docs](https://docs.npmjs.com/misc/semver) for more info.
+
+### `main`
+
+Module ID that is the primary entry point to a package - that is when consumer requests the package i.e. with `require('my-package')` the resolution algorithm should check this field and redirect the request to the specified value. **(Default)** `index.js`
+
+#### Rules
+
+* Value should be a path relative to the root of a package
+* Value gets resolved with node's resolution algorithm, described [here](http://nodejs.cn/doc/nodejs/modules.html#modules_all_together)
+
+#### Tips
+
+* Resolved value should point to a file authored in CommonJS format which still being predominant in the ecosystem acts as a baseline of what should be supported by all the tooling
+
